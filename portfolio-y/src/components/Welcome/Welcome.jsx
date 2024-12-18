@@ -22,13 +22,11 @@ const Welcome = () => {
     config: { tension: 50, friction: 14 },
   });
   return (
-    <div className=' '>
-      {/* <Parallax pages={1} className='flex justify-center '>
-        <ParallaxLayer sticky={{ start: 0, end: 1 }} speed={0.3}> */}
-      <div className='animation'>
+    <div>
+      <div>
         <animated.div
           className='flex justify-center
-            items-center h-[80vh]'
+            items-center h-[80vh] relative'
           style={planeAnimation}
         >
           <h1 className='mr-5 text-4xl font-semibold tracking-wider drop-shadow-md'>
@@ -42,19 +40,17 @@ const Welcome = () => {
         {showIcon && (
           <animated.div
             className='flex flex-col justify-center
-              items-center mb-20 pb-20'
+              items-center absolute top-0 right-0 left-0 bottom-0'
             style={scrollAnimation}
           >
-            <p>Scroll Down</p>
+            <p className='text-xl z-10'>Scroll Down</p>
             <FontAwesomeIcon
               icon={faArrowDown}
-              className='text-[#5b3e70] text-5xl'
+              className='text-[#5b3e70] text-xl z-10'
             />
           </animated.div>
         )}
       </div>
-      {/* </ParallaxLayer>
-      </Parallax> */}
     </div>
   );
 };

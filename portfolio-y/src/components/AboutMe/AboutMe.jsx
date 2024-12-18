@@ -1,11 +1,12 @@
 import './AboutMe.css';
 import { Button } from '@material-tailwind/react';
 import { motion } from 'framer-motion';
+
 const AboutMe = () => {
   return (
     <>
       <motion.div
-        className='flex flex-row justify-center items-center'
+        className='flex flex-row justify-center items-center aboutMe'
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         transition={{ duration: 1 }}

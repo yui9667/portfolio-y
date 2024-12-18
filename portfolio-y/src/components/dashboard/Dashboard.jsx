@@ -1,10 +1,12 @@
-import Welcome from '../Welcome/Welcome';
 import AboutMe from '../AboutMe/AboutMe';
+import Task from '../Task/Task';
+import SvgFolder from '../SvgFolder/Svg';
 const Dashboard = () => {
   return (
     <>
-      <Welcome />
+      <SvgFolder />
       <AboutMe />
+      <Task />
     </>
   );
 };
