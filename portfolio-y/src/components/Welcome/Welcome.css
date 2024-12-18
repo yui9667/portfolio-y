@@ -1,19 +1,13 @@
-.para {
-  background-image: url('../../assets/background1.svg');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  width: 100%;
-  height: 100%;
+body {
+  color: #5b3e70;
 }
-
 .animation {
   background-image: url('../../assets/background1.svg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   width: 100%;
-  height: 1000px;
+  height: 820px;
 }
 
 .div {
