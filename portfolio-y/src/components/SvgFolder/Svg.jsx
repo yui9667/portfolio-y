@@ -1,14 +1,17 @@
 import { Parallax, ParallaxLayer } from '@react-spring/parallax';
 import Welcome from '../Welcome/Welcome';
+//import SvgAboutMe from './SvgAboutMe';
+import AboutMe from '../AboutMe/AboutMe';
+
 const SvgFolder = () => {
   return (
     <>
       <div className='h-screen w-full overflow-hidden '>
-        <Parallax pages={1.5} style={{}}>
+        <Parallax pages={2}>
           <ParallaxLayer offset={0} speed={0.4} className='bg-[#f0dbff]'>
             <Welcome />
           </ParallaxLayer>
-          <ParallaxLayer offset={0} speed={0.2}>
+          <ParallaxLayer offset={0} speed={0.5}>
             <svg
               viewBox='0 0 2000 1080'
               xmlns='http://www.w3.org/2000/svg'
@@ -21,7 +24,7 @@ const SvgFolder = () => {
             </svg>
           </ParallaxLayer>
 
-          <ParallaxLayer offset={0.1} speed={0.3}>
+          <ParallaxLayer offset={0} speed={0.3}>
             <svg
               viewBox='0 0 2000 1080'
               xmlns='http://www.w3.org/2000/svg'
@@ -33,7 +36,7 @@ const SvgFolder = () => {
               />
             </svg>
           </ParallaxLayer>
-          <ParallaxLayer offset={0.2} speed={0.4}>
+          <ParallaxLayer offset={0} speed={0.3}>
             <svg
               viewBox='0 0 2000 1080'
               xmlns='http://www.w3.org/2000/svg'
@@ -45,7 +48,7 @@ const SvgFolder = () => {
               />
             </svg>
           </ParallaxLayer>
-          <ParallaxLayer offset={0.3} speed={0.5}>
+          <ParallaxLayer offset={0} speed={0.2}>
             <svg
               viewBox='0 0 2000 1080'
               xmlns='http://www.w3.org/2000/svg'
@@ -57,7 +60,7 @@ const SvgFolder = () => {
               />
             </svg>
           </ParallaxLayer>
-          <ParallaxLayer offset={0.4} speed={0.5}>
+          <ParallaxLayer offset={0} speed={0.1}>
             <svg
               viewBox='0 0 2000 1080'
               xmlns='http://www.w3.org/2000/svg'
@@ -68,6 +71,9 @@ const SvgFolder = () => {
                 fill='#f7caca'
               />
             </svg>
+          </ParallaxLayer>
+          <ParallaxLayer sticky={{ start: 1, end: 1.8 }} speed={0.3}>
+            <AboutMe />
           </ParallaxLayer>
         </Parallax>
       </div>

@@ -6,7 +6,7 @@ const AboutMe = () => {
   return (
     <>
       <motion.div
-        className='flex flex-row justify-center items-center aboutMe'
+        className='flex flex-row justify-center items-center z-10 mb-20 aboutMe'
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         transition={{ duration: 1 }}
