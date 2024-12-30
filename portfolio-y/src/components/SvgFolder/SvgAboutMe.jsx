@@ -1,13 +1,10 @@
 import { Parallax, ParallaxLayer } from '@react-spring/parallax';
-import AboutMe from '../AboutMe/AboutMe';
 
 const SvgAboutMe = () => {
   return (
     <>
       <Parallax pages={2}>
-        <ParallaxLayer sticky={{ start: 0, end: 2 }}>
-          <AboutMe />
-        </ParallaxLayer>
+        <ParallaxLayer sticky={{ start: 0, end: 2 }}></ParallaxLayer>
         <ParallaxLayer offset={0} speed={0.2}>
           <svg
             viewBox='0 0 2000 1080'

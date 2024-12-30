@@ -1,14 +1,14 @@
 //import AboutMe from '../AboutMe/AboutMe';
 import Task from '../Task/Task';
 import SvgFolder from '../SvgFolder/Svg';
-//import SvgAboutMe from '../SvgFolder/SvgAboutMe';
+import Contact from '../Contact/Contact';
 const Dashboard = () => {
   return (
     <>
       <SvgFolder />
-      {/* <SvgAboutMe />
-      <AboutMe /> */}
+
       <Task />
+      <Contact />
     </>
   );
 };
