@@ -2,7 +2,7 @@ import { useRef } from 'react';
 import emailjs from '@emailjs/browser';
 import { motion } from 'framer-motion';
 import { Button } from '@material-tailwind/react';
-//import { ProjectContact2 } from '../ProjectText/ProjectContact';
+
 const Contact = () => {
   const form = useRef();
   const sendEmail = (e) => {
@@ -24,7 +24,7 @@ const Contact = () => {
       );
   };
   return (
-    <div className='h-screen'>
+    <div className='mt-20 '>
       <motion.h2
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
@@ -50,7 +50,7 @@ const Contact = () => {
           whileInView={{ opacity: 1 }}
           transition={{ duration: 1 }}
           viewport={{ once: true, amount: 0.5 }}
-          className='flex flex-col bg-[#D78DB6] p-20 mt-20 rounded w-[32rem] shadow-sm'
+          className='flex flex-col bg-[#EDCAE0] p-20 mt-20 rounded w-[32rem] shadow-lg border-4'
         >
           <label>Name</label>
           <input
@@ -76,7 +76,7 @@ const Contact = () => {
           <Button
             type='submit'
             value='Send'
-            className='bg-[#AE5CF2] rounded py-2 shadow-sm'
+            className='bg-[#AE5CF2] rounded py-2 shadow-lg'
           >
             Send
           </Button>

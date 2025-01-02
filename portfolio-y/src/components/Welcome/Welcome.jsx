@@ -30,7 +30,7 @@ const Welcome = () => {
           style={planeAnimation}
         >
           <h1 className='mr-5 text-4xl font-semibold tracking-wider drop-shadow-md'>
-            Welcome to Yui Jensen Portfolio
+            Welcome to Yui Jensen Page
           </h1>
           <FontAwesomeIcon
             icon={faPlane}

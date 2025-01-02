@@ -3,6 +3,7 @@ import WeatherImage from '../../assets/weather.jpg';
 import QuizImage from '../../../src/assets/quiz.jpg';
 import './Task.css';
 import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
 const Task = () => {
   const projects = [
     {
@@ -26,7 +27,7 @@ const Task = () => {
   ];
   return (
     <>
-      <section className='flex flex-col gap-20 mb-20 h-screen'>
+      <section className='flex flex-col gap-20 '>
         <motion.h2
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
@@ -81,6 +82,28 @@ const Task = () => {
             </div>
           </motion.div>
         ))}
+        <Button
+          variant='text'
+          className=' flex items-center my-5 p-2  px-5 rounded m-auto mb-20 bg-[#F283C0] text-white shadow-lg'
+        >
+          <Link to='/project' className='tracking-wider'>
+            See More About Project
+          </Link>
+          <svg
+            xmlns='http://www.w3.org/2000/svg'
+            fill='none'
+            viewBox='0 0 24 24'
+            strokeWidth={3}
+            stroke='currentColor'
+            className='h-5 w-5'
+          >
+            <path
+              strokeLinecap='round'
+              strokeLinejoin='round'
+              d='M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3'
+            />
+          </svg>
+        </Button>
       </section>
     </>
   );

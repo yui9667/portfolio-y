@@ -19,7 +19,7 @@ const AboutMe = () => {
           </h2>
           <Button
             variant='text'
-            className=' flex items-center my-5 p-2 rounded'
+            className=' flex items-center my-8 p-2 px-5 rounded bg-[#F283C0] text-white shadow-lg tracking-wider'
           >
             <Link to='/about-me'>See More About Me</Link>
             <svg

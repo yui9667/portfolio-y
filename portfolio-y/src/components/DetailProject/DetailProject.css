@@ -1,0 +1,6 @@
+.detail-project-container {
+  background-image: url('../../../src/assets/detail-project-background.svg');
+  background-position: center;
+  background-repeat: none;
+  background-size: cover;
+}
