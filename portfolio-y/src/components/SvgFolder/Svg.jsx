@@ -2,7 +2,6 @@ import { Parallax, ParallaxLayer } from '@react-spring/parallax';
 import Welcome from '../Welcome/Welcome';
 //import SvgAboutMe from './SvgAboutMe';
 import AboutMe from '../AboutMe/AboutMe';
-
 const SvgFolder = () => {
   return (
     <>

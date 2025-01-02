@@ -2,7 +2,7 @@ import { useRef } from 'react';
 import emailjs from '@emailjs/browser';
 import { motion } from 'framer-motion';
 import { Button } from '@material-tailwind/react';
-
+//import { ProjectContact2 } from '../ProjectText/ProjectContact';
 const Contact = () => {
   const form = useRef();
   const sendEmail = (e) => {
@@ -24,8 +24,25 @@ const Contact = () => {
       );
   };
   return (
-    <>
-      <section className='flex flex-col items-center justify-center mt-20'>
+    <div className='h-screen'>
+      <motion.h2
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ duration: 1 }}
+        viewport={{ once: true, amount: 0.5 }}
+        className='text-6xl mt-20 text-center text-bold tracking-wider relative'
+        style={{ fontFamily: ' Bebas Neue' }}
+      >
+        Contact
+        <motion.div
+          className=' h-1 m-auto right-0 left-0 bg-[#AE5CF2] absolute'
+          initial={{ width: 0 }}
+          animate={{ width: '20%' }}
+          viewport={{ once: true, amount: 0.5 }}
+          transition={{ duration: 5, ease: 'easeInOut' }}
+        />
+      </motion.h2>
+      <section className='flex flex-col items-center justify-center '>
         <motion.form
           ref={form}
           onSubmit={sendEmail}
@@ -33,30 +50,39 @@ const Contact = () => {
           whileInView={{ opacity: 1 }}
           transition={{ duration: 1 }}
           viewport={{ once: true, amount: 0.5 }}
-          className='flex flex-col bg-amber-100 p-20 mt-20'
+          className='flex flex-col bg-[#D78DB6] p-20 mt-20 rounded w-[32rem] shadow-sm'
         >
           <label>Name</label>
           <input
-            className='px-20 py-1 rounded-sm mb-3'
+            className='py-2 rounded-sm mb-3 '
             type='text'
             name='user_name'
+            required
           />
           <label>Email</label>
           <input
-            className='py-1 rounded-sm mb-3'
+            className='py-3 rounded-sm mb-3'
             type='email'
             name='user_email'
+            required
           />
           <label>Message</label>
-          <textarea name='message ' className='py-20 rounded-sm mb-3' />
-          <input
+          <textarea
+            name='message '
+            className='pb-20 rounded-sm mb-3'
+            required
+          />
+
+          <Button
             type='submit'
             value='Send'
-            className=' py-1 text-white rounded-sm transition ease-in-out delay-100 bg-[#AE5CF2] text-base rounded px-5  tracking-wide drop-shadow-lg hover:-translate-y-1 hover:scale-110  hover:bg-amber-700 duration-300 ...'
-          />
+            className='bg-[#AE5CF2] rounded py-2 shadow-sm'
+          >
+            Send
+          </Button>
         </motion.form>
       </section>
-    </>
+    </div>
   );
 };
 export default Contact;

@@ -51,8 +51,8 @@ export default ProjectText;
 export function ProjectText2() {
   return (
     <section>
-      <ProjectText baseVelocity={-5}>ProjectProject</ProjectText>
-      <ProjectText baseVelocity={5}>ProjectProject</ProjectText>
+      <ProjectText baseVelocity={-5}>yuijensen yuijensen</ProjectText>
+      <ProjectText baseVelocity={5}>yuijensen yuijensen</ProjectText>
     </section>
   );
 }

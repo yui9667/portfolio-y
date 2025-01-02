@@ -1,12 +1,12 @@
 import './AboutMe.css';
 import { Button } from '@material-tailwind/react';
 import { motion } from 'framer-motion';
-
+import { Link } from 'react-router-dom';
 const AboutMe = () => {
   return (
     <>
       <motion.div
-        className='flex flex-row justify-center items-center z-10 mb-20 aboutMe'
+        className='flex flex-row justify-center items-center z-10 aboutMe'
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         transition={{ duration: 1 }}
@@ -21,7 +21,7 @@ const AboutMe = () => {
             variant='text'
             className=' flex items-center my-5 p-2 rounded'
           >
-            <a href=''>See More About Me</a>
+            <Link to='/about-me'>See More About Me</Link>
             <svg
               xmlns='http://www.w3.org/2000/svg'
               fill='none'
