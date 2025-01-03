@@ -1,7 +1,7 @@
 import { Button } from '@material-tailwind/react';
 import WeatherImage from '../../assets/weather.jpg';
 import QuizImage from '../../../src/assets/quiz.jpg';
-import './Task.css';
+
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 const Task = () => {
@@ -38,7 +38,8 @@ const Task = () => {
         >
           Project
           <motion.div
-            className=' right-0 left-0 h-1 m-auto bg-[#AE5CF2] absolute'
+            className=' right-0 left-0 h-1 m-auto  absolute'
+            style={{ backgroundColor: 'var(--btn-color)' }}
             initial={{ width: 0 }}
             animate={{ width: '20%' }}
             viewport={{ once: true, amount: 0.5 }}
@@ -55,7 +56,10 @@ const Task = () => {
             key={index}
             className='flex items-center justify-center drop-shadow-lg  '
           >
-            <div className='flex flex-row-reverse bg-[#fff] w-1/2 rounded '>
+            <div
+              className='flex flex-row-reverse bg-[#fff] w-1/2 rounded '
+              style={{ backgroundColor: 'var(--container-color)' }}
+            >
               <img
                 src={project.img}
                 alt={project.title}
@@ -67,12 +71,18 @@ const Task = () => {
                 <p className='text-xl'>{project.language}</p>
                 <p className='text-x'>{project.description}</p>
                 <div className='flex justify-center items-center tracking-wide drop-shadow-lg mt-5'>
-                  <Button className='mr-3 bg-[#AE5CF2] text-white text-base rounded px-5 py-1 '>
+                  <Button
+                    className='mr-3 text-white text-base rounded px-5 py-1 '
+                    style={{ backgroundColor: 'var(--btn-color)' }}
+                  >
                     <a href={project.github} target='_blank'>
                       Github
                     </a>
                   </Button>
-                  <Button className='ml-3 bg-[#AE5CF2] text-white text-base rounded px-2 py-1 '>
+                  <Button
+                    className='ml-3 text-white text-base rounded px-2 py-1 '
+                    style={{ backgroundColor: 'var(--btn-color)' }}
+                  >
                     <a href={project.liveDemo} target='_blank'>
                       Live Demo
                     </a>
@@ -85,6 +95,7 @@ const Task = () => {
         <Button
           variant='text'
           className=' flex items-center my-5 p-2  px-5 rounded m-auto mb-20 bg-[#F283C0] text-white shadow-lg'
+          style={{ backgroundColor: 'var(--detail-btn-color)' }}
         >
           <Link to='/project' className='tracking-wider'>
             See More About Project

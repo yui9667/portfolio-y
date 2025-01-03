@@ -14,12 +14,16 @@ const AboutMe = () => {
       >
         <div className='flex flex-col justify-center items-center'>
           <h2 className='mx-10 w-96 text-3xl tracking-wide'>
-            I am <strong className='text-[#EF5AB3]'>Yui Jensen {''}</strong>
+            I am{' '}
+            <strong style={{ color: 'var(--detail-btn-color)' }}>
+              Yui Jensen {''}
+            </strong>
             Junior Front-End Developer | UX-Focused with Backend Knowledge
           </h2>
           <Button
             variant='text'
-            className=' flex items-center my-8 p-2 px-5 rounded bg-[#F283C0] text-white shadow-lg tracking-wider'
+            className=' flex items-center my-8 p-2 px-5 rounded text-white shadow-lg tracking-wider'
+            style={{ backgroundColor: 'var(--detail-btn-color)' }}
           >
             <Link to='/about-me'>See More About Me</Link>
             <svg
@@ -38,10 +42,16 @@ const AboutMe = () => {
             </svg>
           </Button>
           <div>
-            <Button className='mr-10 bg-[#AE5CF2] text-white text-base rounded px-5 py-1 tracking-wide drop-shadow-lg'>
-              <a href=''>Resume</a>
+            <Button
+              className='mr-10  text-white text-base rounded px-5 py-1 tracking-wide drop-shadow-lg'
+              style={{ backgroundColor: 'var(--btn-color)' }}
+            >
+              <a href='../../../src/assets/Resume.pdf'>Resume</a>
             </Button>
-            <Button className='bg-[#AE5CF2] text-base rounded px-5 py-1 tracking-wide drop-shadow-lg'>
+            <Button
+              className=' text-base rounded px-5 py-1 tracking-wide drop-shadow-lg'
+              style={{ backgroundColor: 'var(--btn-color)' }}
+            >
               <a href='https://www.linkedin.com/in/yui-jensen67/'>Linkedin</a>
             </Button>
           </div>

@@ -1,14 +1,31 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSun, faMoon } from '@fortawesome/free-solid-svg-icons';
+import { DarkModeContext } from '../Toggle/DarkModeContext';
 import './Nav.css';
 const Nav = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const { darkMode, setDarkMode } = useContext(DarkModeContext);
+
+  //*Dark Mode
+  useEffect(() => {
+    if (darkMode) {
+      document.body.classList.add('dark-mode');
+    } else {
+      document.body.classList.remove('dark-mode');
+    }
+  }, [darkMode]);
+
+  const toggleDarkMode = () => {
+    setDarkMode(!darkMode);
+  };
+  //* Hamburger menu
   const toggleHamburger = () => {
     setIsOpen(!isOpen);
   };
+  //* Scroll
   useEffect(() => {
     const handleScroll = () => {
       if (scrollY > window.innerHeight) {
@@ -19,15 +36,17 @@ const Nav = () => {
     };
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
-  });
+  }, []);
   return (
     <div>
       <nav className={`nav-bar ${isScrolled ? 'scrolled' : ''}`}>
-        {/* <img
-          src='../src/assets/logo-yui.png'
-          alt='logo'
-          className='pl-10 z-10 w-28'
-        /> */}
+        <Link to='/'>
+          <img
+            src='../../../src/assets/logo-jese.png'
+            alt='logo'
+            className='pl-10 z-10 w-20'
+          />
+        </Link>
         <ul className={`nav-menu ${isOpen ? 'active' : ''}`}>
           <li className='nav-item'>
             <Link to='/about-me' className='nav-link'>
@@ -51,12 +70,9 @@ const Nav = () => {
           </li>
           <div className='pr-10'>
             <FontAwesomeIcon
-              icon={faSun}
-              style={{ color: '#e6620a', margin: '10px', fontSize: '20px' }}
-            />
-            <FontAwesomeIcon
-              icon={faMoon}
-              style={{ color: '#FFD43B', fontSize: '20px' }}
+              icon={darkMode ? faSun : faMoon}
+              onClick={toggleDarkMode}
+              style={{ fontSize: '1.5rem', marginTop: '0.5rem' }}
             />
           </div>
         </ul>

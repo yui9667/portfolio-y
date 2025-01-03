@@ -32,7 +32,8 @@ const DetailAboutMe = () => {
       >
         About Me
         <motion.div
-          className=' right-0 left-0 h-1 m-auto bg-[#AE5CF2] absolute'
+          className=' right-0 left-0 h-1 m-auto absolute'
+          style={{ backgroundColor: 'var(--btn-color)' }}
           initial={{ width: 0 }}
           animate={{ width: '20%' }}
           whileInView={{ opacity: 1 }}
@@ -40,7 +41,13 @@ const DetailAboutMe = () => {
           transition={{ duration: 5, ease: 'easeInOut' }}
         />
       </motion.h2>
-      <motion.section className='flex flex-col justify-center items-center gap-20'>
+      <motion.section
+        className='flex flex-col justify-center items-center gap-20'
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ duration: 1 }}
+        viewport={{ once: true, amount: 0.5 }}
+      >
         <img
           src='../../../src/assets/detailAboutMe.png'
           alt=''
@@ -48,7 +55,11 @@ const DetailAboutMe = () => {
         />
         <div
           className='w-96 bg-[#fff] p-10 rounded shadow-lg'
-          style={{ width: '100%', maxWidth: '800px' }}
+          style={{
+            width: '100%',
+            maxWidth: '800px',
+            backgroundColor: ' var( --container-color)',
+          }}
         >
           <h3>About Myself</h3>
           <p className='tracking-wide '>
@@ -81,7 +92,8 @@ const DetailAboutMe = () => {
         >
           Skills
           <motion.div
-            className=' right-0 left-0 h-1 m-auto bg-[#AE5CF2] absolute'
+            className=' right-0 left-0 h-1 m-auto  absolute'
+            style={{ backgroundColor: 'var(--btn-color)' }}
             initial={{ width: 0 }}
             animate={{ width: '20%' }}
             viewport={{ once: true, amount: 0.5 }}

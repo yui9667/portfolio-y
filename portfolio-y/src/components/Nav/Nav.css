@@ -1,3 +1,23 @@
+.dark-mode {
+  --background-color: #3d3e47;
+  --foreground-color: #8c46ae;
+  --btn-color: #ae5cf2;
+  --welcome-background-color: #231b4b;
+  --letter-color: #f1ddff;
+  --nav-color: #3a3853;
+  --detail-btn-color: #bd6c99;
+  --contact-form-color: #515061;
+  --detail-letter: hsl(320, 6%, 63%);
+  --container-color: #252234;
+
+  /*Svg*/
+  --first-color: #3d2697;
+  --second-color: #584772;
+  --third-color: #61557d;
+  --fourth-color: #50475c;
+  --fifth-color: #3d3e47;
+}
+
 .nav-bar {
   position: fixed;
   top: 0;
@@ -12,7 +32,7 @@
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 .nav-bar.scrolled {
-  background-color: #fbeded;
+  background-color: var(--nav-color);
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 h5 {
@@ -42,7 +62,7 @@ li {
   position: fixed;
   left: -115%;
   top: 0px;
-  background-color: #fbeded;
+  background-color: var(--nav-color);
   width: 100%;
   transition: 0.7s;
   display: flex;
@@ -69,7 +89,7 @@ a {
   transition: 0.2s ease;
 }
 .nav-link:hover {
-  color: #8c46ae;
+  color: var(--foreground-color);
 }
 .hamburger {
   cursor: pointer;
@@ -83,7 +103,7 @@ a {
   height: 3px;
   margin: 5px auto;
   transition: all 0.3s ease-in-out;
-  background-color: #8c46ae;
+  background-color: var(--foreground-color);
 }
 .hamburger.active .bar:nth-child(2) {
   opacity: 0;

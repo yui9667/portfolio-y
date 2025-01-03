@@ -7,5 +7,25 @@ body {
   padding: 0;
   box-sizing: border-box;
   font-family: sans-serif;
-  background-color: #f7caca;
+  background-color: var(--background-color);
+  color: var(--letter-color);
+}
+:root {
+  --background-color: #f7caca;
+  --foreground-color: #8c46ae;
+  --btn-color: #ae5cf2;
+  --welcome-background-color: #f0dbff;
+  --letter-color: #5b3e70;
+  --nav-color: #fbeded;
+  --detail-btn-color: #f283c0;
+  --contact-form-color: #dab2b2;
+  --detail-letter: hsl(318, 100%, 97%);
+  --container-color: #fff;
+
+  /*Svg */
+  --first-color: #8f57b9;
+  --second-color: #bd6bb3;
+  --third-color: #da87b1;
+  --fourth-color: #eda8b8;
+  --fifth-color: #f7caca;
 }
