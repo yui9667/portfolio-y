@@ -39,3 +39,10 @@
   display: block;
   margin-right: 30px;
 }
+
+@media (max-width: 768px) {
+  .scroller {
+    height: 5vh;
+    font-size: 2.5rem;
+  }
+}

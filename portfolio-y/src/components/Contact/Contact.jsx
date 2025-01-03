@@ -2,7 +2,7 @@ import { useRef } from 'react';
 import emailjs from '@emailjs/browser';
 import { motion } from 'framer-motion';
 import { Button } from '@material-tailwind/react';
-import Nav from '../Nav/Nav';
+import './Contact.css';
 const Contact = () => {
   const form = useRef();
   const sendEmail = (e) => {
@@ -25,18 +25,18 @@ const Contact = () => {
   };
   return (
     <div className='mt-20 '>
-      <Nav />
       <motion.h2
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         transition={{ duration: 1 }}
         viewport={{ once: true, amount: 0.5 }}
-        className='text-6xl mt-20 text-center text-bold tracking-wider relative'
+        className='text-6xl mt-20 text-center text-bold tracking-wider relative max-md:text-5xl'
         style={{ fontFamily: ' Bebas Neue' }}
       >
         Contact
         <motion.div
-          className=' h-1 m-auto right-0 left-0 bg-[#AE5CF2] absolute'
+          className=' h-1 m-auto right-0 left-0  absolute'
+          style={{ backgroundColor: 'var(--btn-color' }}
           initial={{ width: 0 }}
           animate={{ width: '20%' }}
           viewport={{ once: true, amount: 0.5 }}
@@ -51,7 +51,7 @@ const Contact = () => {
           whileInView={{ opacity: 1 }}
           transition={{ duration: 1 }}
           viewport={{ once: true, amount: 0.5 }}
-          className='flex flex-col  p-20 mt-20 rounded w-[32rem] shadow-lg border-4'
+          className='flex flex-col  p-20 mt-20 rounded w-[32rem] shadow-lg border-4 contact-form'
           style={{ backgroundColor: 'var(--contact-form-color)' }}
         >
           <label>Name</label>
@@ -78,7 +78,7 @@ const Contact = () => {
           <Button
             type='submit'
             value='Send'
-            className='rounded py-2 shadow-lg'
+            className='rounded py-2 shadow-lg max-md:text-sm'
             style={{ backgroundColor: 'var(--btn-color)' }}
           >
             Send

@@ -5,15 +5,15 @@ import { Link } from 'react-router-dom';
 const AboutMe = () => {
   return (
     <>
-      <motion.div
-        className='flex flex-row justify-center items-center z-10 aboutMe'
+      <motion.section
+        className='flex flex-row justify-center items-center z-10 aboutMe max-md:flex-col-reverse '
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         transition={{ duration: 1 }}
         viewport={{ once: true, amount: 0.5 }}
       >
         <div className='flex flex-col justify-center items-center'>
-          <h2 className='mx-10 w-96 text-3xl tracking-wide'>
+          <h2 className='mx-10 w-96 text-3xl text-center tracking-wide max-md:text-2xl,  max-sm:text-lg  , max-xm:px-8'>
             I am{' '}
             <strong style={{ color: 'var(--detail-btn-color)' }}>
               Yui Jensen {''}
@@ -22,7 +22,7 @@ const AboutMe = () => {
           </h2>
           <Button
             variant='text'
-            className=' flex items-center my-8 p-2 px-5 rounded text-white shadow-lg tracking-wider'
+            className=' flex items-center my-8 p-2 px-5 rounded text-white shadow-lg tracking-wider max-md:text-lg, max-sm:text-sm max-sm:p-1.5 '
             style={{ backgroundColor: 'var(--detail-btn-color)' }}
           >
             <Link to='/about-me'>See More About Me</Link>
@@ -32,7 +32,7 @@ const AboutMe = () => {
               viewBox='0 0 24 24'
               strokeWidth={3}
               stroke='currentColor'
-              className='h-5 w-5'
+              className='h-5 w-5 '
             >
               <path
                 strokeLinecap='round'
@@ -43,13 +43,13 @@ const AboutMe = () => {
           </Button>
           <div>
             <Button
-              className='mr-10  text-white text-base rounded px-5 py-1 tracking-wide drop-shadow-lg'
+              className='mr-10  text-white text-base rounded px-5 py-1 tracking-wide drop-shadow-lg max-md:text-sm '
               style={{ backgroundColor: 'var(--btn-color)' }}
             >
               <a href='../../../src/assets/Resume.pdf'>Resume</a>
             </Button>
             <Button
-              className=' text-base rounded px-5 py-1 tracking-wide drop-shadow-lg'
+              className=' text-base rounded px-5 py-1 tracking-wide drop-shadow-lg max-md:text-sm'
               style={{ backgroundColor: 'var(--btn-color)' }}
             >
               <a href='https://www.linkedin.com/in/yui-jensen67/'>Linkedin</a>
@@ -59,9 +59,9 @@ const AboutMe = () => {
         <img
           src='../../../src/assets/profile.png'
           alt='profile'
-          className='w-96 mb-20 drop-shadow-lg'
+          className='w-96 mb-20 drop-shadow-lg main-profile'
         />
-      </motion.div>
+      </motion.section>
     </>
   );
 };

@@ -1,0 +1,41 @@
+.svg-wave {
+  width: 100%;
+  min-height: 120vh;
+  height: auto;
+}
+.parallax-layer {
+  position: relative;
+  overflow: hidden;
+}
+.svg-layer-1 {
+  z-index: 1;
+}
+
+.svg-layer-2 {
+  z-index: 2;
+}
+
+.svg-layer-3 {
+  z-index: 3;
+}
+@media (max-width: 1470px) {
+  .svg-wave {
+    max-width: 100vw;
+    min-height: 150vh;
+  }
+}
+@media (max-width: 768px) {
+  .svg-wave {
+    min-height: 160vh;
+  }
+}
+@media (max-width: 568px) {
+  .svg-wave {
+    min-height: 175vh;
+  }
+}
+@media (max-width: 420px) {
+  .svg-wave {
+    min-height: 180vh;
+  }
+}

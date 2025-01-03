@@ -60,7 +60,7 @@ li {
 }
 .nav-menu {
   position: fixed;
-  left: -115%;
+  right: -115%;
   top: 0px;
   background-color: var(--nav-color);
   width: 100%;
@@ -121,7 +121,7 @@ a {
   }
   .nav-menu {
     position: static;
-    left: 0%;
+    right: 0%;
     flex-direction: row;
     background-color: transparent;
   }

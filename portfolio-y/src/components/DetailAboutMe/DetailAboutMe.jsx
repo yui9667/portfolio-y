@@ -1,6 +1,7 @@
 import Footer from '../Footer/Footer';
 import { motion } from 'framer-motion';
-import Nav from '../Nav/Nav';
+
+import './DetailAboutMe.css';
 import {
   SiHtml5,
   SiCss3,
@@ -21,13 +22,12 @@ import {
 const DetailAboutMe = () => {
   return (
     <div>
-      <Nav />
       <motion.h2
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         transition={{ duration: 1 }}
         viewport={{ once: true, amount: 0.5 }}
-        className='text-6xl mt-20 text-center text-bold tracking-wider relative'
+        className='text-6xl mt-20 text-center text-bold tracking-wider relative max-md:text-5xl'
         style={{ fontFamily: ' Bebas Neue' }}
       >
         About Me
@@ -50,17 +50,10 @@ const DetailAboutMe = () => {
       >
         <img
           src='../../../src/assets/detailAboutMe.png'
-          alt=''
-          style={{ width: '100%', maxWidth: '450px' }}
+          alt='profile'
+          className='profile-image'
         />
-        <div
-          className='w-96 bg-[#fff] p-10 rounded shadow-lg'
-          style={{
-            width: '100%',
-            maxWidth: '800px',
-            backgroundColor: ' var( --container-color)',
-          }}
-        >
+        <div className=' p-10 rounded shadow-lg detail-aboutme-container  max-sm:p-5 max-sm:text-sm'>
           <h3>About Myself</h3>
           <p className='tracking-wide '>
             I am Japanese and have a passion for exploring and trying new
@@ -87,12 +80,12 @@ const DetailAboutMe = () => {
           whileInView={{ opacity: 1 }}
           transition={{ duration: 1 }}
           viewport={{ once: true, amount: 0.5 }}
-          className='text-6xl mt-20 text-center text-bold tracking-wider relative mb-20'
+          className='text-6xl mt-20 text-center text-bold tracking-wider relative mb-20 max-md:text-5xl'
           style={{ fontFamily: ' Bebas Neue' }}
         >
           Skills
           <motion.div
-            className=' right-0 left-0 h-1 m-auto  absolute'
+            className=' right-0 left-0 h-1 m-auto absolute'
             style={{ backgroundColor: 'var(--btn-color)' }}
             initial={{ width: 0 }}
             animate={{ width: '20%' }}
@@ -101,13 +94,15 @@ const DetailAboutMe = () => {
           />
         </motion.h2>
         <motion.div
-          className='flex flex-col justify-center items-center'
+          className='flex flex-col justify-center items-center skills'
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           transition={{ once: true, amount: 0.5 }}
         >
-          <h3 className='uppercase text-2xl mb-10'>Languages</h3>
-          <div className='flex flex-row gap-20 items-center mb-10'>
+          <h3 className='uppercase text-2xl mb-10 max-md:text-xl, max-sm:text-base'>
+            Languages
+          </h3>
+          <div className='flex flex-row gap-20 items-center mb-10 max-sm:flex-col'>
             {[SiHtml5, SiCss3, SiJavascript, SiTypescript].map(
               (Icon, index) => (
                 <motion.div
@@ -117,16 +112,16 @@ const DetailAboutMe = () => {
                   viewport={{ once: true, amount: 0.5 }}
                   transition={{ type: 'spring', stiffness: 50 }}
                 >
-                  <Icon size={60} />
+                  <Icon className='icon' />
                 </motion.div>
               )
             )}
           </div>
 
-          <h3 className='uppercase text-2xl mb-10'>
+          <h3 className='uppercase text-2xl mb-10 max-md:text-xl, max-sm:text-base'>
             Styling & Tools & Libraries
           </h3>
-          <div className='flex flex-row gap-20 items-center mb-10'>
+          <div className='flex flex-row gap-20 items-center mb-10 max-sm:flex-col'>
             {[SiSass, SiTailwindcss, SiBootstrap].map((Icon, index) => (
               <motion.div
                 key={index}
@@ -135,12 +130,14 @@ const DetailAboutMe = () => {
                 viewport={{ once: true, amount: 0.5 }}
                 transition={{ type: 'spring', stiffness: 50 }}
               >
-                <Icon size={60} />
+                <Icon className='icon' />
               </motion.div>
             ))}
           </div>
-          <h3 className='uppercase text-2xl mb-10'>Design & Prototyping</h3>
-          <div className='mb-10'>
+          <h3 className='uppercase text-2xl mb-10 max-md:text-xl, max-sm:text-base'>
+            Design & Prototyping
+          </h3>
+          <div className='mb-10 max-sm:flex-col'>
             {[SiFigma].map((Icon, index) => (
               <motion.div
                 key={index}
@@ -149,14 +146,14 @@ const DetailAboutMe = () => {
                 viewport={{ once: true, amount: 0.5 }}
                 transition={{ type: 'spring', stiffness: 50 }}
               >
-                <Icon size={60} />
+                <Icon className='icon' />
               </motion.div>
             ))}
           </div>
-          <h3 className='uppercase text-2xl mb-10'>
+          <h3 className='uppercase text-center text-2xl mb-10 max-md:text-xl, max-sm:text-base'>
             Front-End Libraries & Frameworks
           </h3>
-          <div className='mb-10'>
+          <div className='mb-10 max-sm:flex-col'>
             {[SiReact].map((Icon, index) => (
               <motion.div
                 key={index}
@@ -165,14 +162,14 @@ const DetailAboutMe = () => {
                 viewport={{ once: true, amount: 0.5 }}
                 transition={{ type: 'spring', stiffness: 50 }}
               >
-                <Icon size={60} />
+                <Icon className='icon' />
               </motion.div>
             ))}
           </div>
-          <h3 className='uppercase text-2xl mb-10'>
+          <h3 className='uppercase text-2xl items-center text-center justify-center mb-10 max-md:text-xl, max-sm:text-base'>
             Back-End Frameworks & Environments
           </h3>
-          <div className='flex flex-row gap-20 items-center mb-10'>
+          <div className='flex flex-row gap-20 items-center mb-10 max-sm:flex-col'>
             {[SiNodedotjs, SiExpress].map((Icon, index) => (
               <motion.div
                 key={index}
@@ -181,12 +178,14 @@ const DetailAboutMe = () => {
                 viewport={{ once: true, amount: 0.5 }}
                 transition={{ type: 'spring', stiffness: 50 }}
               >
-                <Icon size={60} />
+                <Icon className='icon' />
               </motion.div>
             ))}
           </div>
-          <h3 className='uppercase text-2xl mb-10'>Databases</h3>
-          <div className='flex flex-row gap-20 items-center mb-10'>
+          <h3 className='uppercase text-2xl mb-10 max-md:text-xl, max-sm:text-base'>
+            Databases
+          </h3>
+          <div className='flex flex-row gap-20 items-center mb-10 max-sm:flex-col'>
             {[SiMongodb, SiMysql].map((Icon, index) => (
               <motion.div
                 key={index}
@@ -195,14 +194,14 @@ const DetailAboutMe = () => {
                 viewport={{ once: true, amount: 0.5 }}
                 transition={{ type: 'spring', stiffness: 50 }}
               >
-                <Icon size={60} />
+                <Icon className='icon' />
               </motion.div>
             ))}
           </div>
-          <h3 className='uppercase text-2xl mb-10'>
+          <h3 className='uppercase text-center text-2xl mb-10 max-md:text-xl, max-sm:text-base'>
             Version Control & Collaboration
           </h3>
-          <div className='flex flex-row gap-20 items-center mb-10'>
+          <div className='flex flex-row gap-20 items-center mb-10 max-sm:flex-col'>
             {[SiGithub, SiGit].map((Icon, index) => (
               <motion.div
                 key={index}
@@ -211,7 +210,7 @@ const DetailAboutMe = () => {
                 viewport={{ once: true, amount: 0.5 }}
                 transition={{ type: 'spring', stiffness: 50 }}
               >
-                <Icon size={60} />
+                <Icon className='icon' />
               </motion.div>
             ))}
           </div>

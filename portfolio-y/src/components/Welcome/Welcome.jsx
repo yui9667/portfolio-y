@@ -4,7 +4,7 @@ import './Welcome.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPlane, faArrowDown } from '@fortawesome/free-solid-svg-icons';
 import { useState } from 'react';
-
+import './Welcome.css';
 const Welcome = () => {
   const [showIcon, setShowIcon] = useState(false);
   const planeAnimation = useSpring({
@@ -22,19 +22,19 @@ const Welcome = () => {
     config: { tension: 50, friction: 14 },
   });
   return (
-    <div>
+    <div className='welcome-container'>
       <div>
         <animated.div
           className='flex justify-center
             items-center h-[80vh] relative'
           style={planeAnimation}
         >
-          <h1 className='mr-5 text-4xl font-semibold tracking-wider drop-shadow-md'>
+          <h1 className='mr-5 text-4xl font-semibold tracking-wider drop-shadow-md max-md:text-3xl welcome-letter'>
             Welcome to Yui Jensen Page
           </h1>
           <FontAwesomeIcon
             icon={faPlane}
-            className='drop-shadow-md text-[#c8d184] text-6xl'
+            className='drop-shadow-md text-[#c8d184] text-6xl max-md:text-5xl plane'
           />
         </animated.div>
         {showIcon && (
@@ -43,10 +43,12 @@ const Welcome = () => {
               items-center absolute top-0 right-0 left-0 bottom-0'
             style={scrollAnimation}
           >
-            <p className='text-xl z-10'>Scroll Down</p>
+            <p className='text-xl z-10 max-md:text-lg max-md:mt-20'>
+              Scroll Down
+            </p>
             <FontAwesomeIcon
               icon={faArrowDown}
-              className='text-[#5b3e70] text-xl z-10'
+              className='text-[#5b3e70] text-xl z-10 max-md:text-sm'
             />
           </animated.div>
         )}
