@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSun, faMoon } from '@fortawesome/free-solid-svg-icons';
 import { DarkModeContext } from '../Toggle/DarkModeContext';
+import Logo from '../../assets/logo-jese.png';
 import './Nav.css';
 const Nav = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -41,11 +42,7 @@ const Nav = () => {
     <div>
       <nav className={`nav-bar ${isScrolled ? 'scrolled' : ''}`}>
         <Link to='/'>
-          <img
-            src='../../../src/assets/logo-jese.png'
-            alt='logo'
-            className='pl-10 z-10 w-20'
-          />
+          <img src={Logo} alt='logo' className='pl-10 z-10 w-20' />
         </Link>
         <ul className={`nav-menu ${isOpen ? 'active' : ''}`}>
           <li className='nav-item'>

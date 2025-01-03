@@ -1,6 +1,6 @@
 import Footer from '../Footer/Footer';
 import { motion } from 'framer-motion';
-
+import { DetailAboutMeProfile } from '../../assets/detailAboutMe.png';
 import './DetailAboutMe.css';
 import {
   SiHtml5,
@@ -49,7 +49,7 @@ const DetailAboutMe = () => {
         viewport={{ once: true, amount: 0.5 }}
       >
         <img
-          src='../../../src/assets/detailAboutMe.png'
+          src={DetailAboutMeProfile}
           alt='profile'
           className='profile-image'
         />

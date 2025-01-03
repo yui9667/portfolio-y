@@ -2,6 +2,9 @@ import './AboutMe.css';
 import { Button } from '@material-tailwind/react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
+import AboutMeProfile from '../../assets/profile.png';
+import { Resume } from '../../assets/Resume.pdf';
+
 const AboutMe = () => {
   return (
     <>
@@ -46,7 +49,7 @@ const AboutMe = () => {
               className='mr-10  text-white text-base rounded px-5 py-1 tracking-wide drop-shadow-lg max-md:text-sm '
               style={{ backgroundColor: 'var(--btn-color)' }}
             >
-              <a href='../../../src/assets/Resume.pdf'>Resume</a>
+              <a href={Resume}>Resume</a>
             </Button>
             <Button
               className=' text-base rounded px-5 py-1 tracking-wide drop-shadow-lg max-md:text-sm'
@@ -57,7 +60,7 @@ const AboutMe = () => {
           </div>
         </div>
         <img
-          src='../../../src/assets/profile.png'
+          src={AboutMeProfile}
           alt='profile'
           className='w-96 mb-20 drop-shadow-lg main-profile'
         />
