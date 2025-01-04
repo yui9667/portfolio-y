@@ -3,7 +3,7 @@ import { Button } from '@material-tailwind/react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import AboutMeProfile from '../../assets/profile.png';
-import { Resume } from '../../assets/Resume.pdf';
+import Resume from '../../../public/Resume.pdf';
 
 const AboutMe = () => {
   return (

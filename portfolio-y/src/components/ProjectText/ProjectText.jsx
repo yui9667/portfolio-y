@@ -10,7 +10,7 @@ import {
   wrap,
 } from 'framer-motion';
 import './ProjectText.css';
-
+import PropTypes from 'prop-types';
 const ProjectText = ({ children, baseVelocity = 100 }) => {
   const baseX = useMotionValue(0);
   const { scrollY } = useScroll();
@@ -23,7 +23,7 @@ const ProjectText = ({ children, baseVelocity = 100 }) => {
     clamp: false,
   });
 
-  const x = useTransform(baseX, (v) => `${wrap(-50, 0, v)}%`);
+  const x = useTransform(baseX, (v) => `${wrap(-100, 0, v)}%`);
   const directionFactor = useRef(1);
   useAnimationFrame((_, delta) => {
     let moveBy = directionFactor.current * baseVelocity * (delta / 1000);
@@ -37,22 +37,27 @@ const ProjectText = ({ children, baseVelocity = 100 }) => {
   });
   return (
     <>
-      <motion.div className='scroller' style={{ x }}>
-        <span>{children}</span>
-        <span>{children}</span>
-        <span>{children}</span>
-        <span>{children}</span>
-      </motion.div>
+      <div className='scroller-container'>
+        <motion.div className='scroller' style={{ x }}>
+          {Array.from({ length: 15 }).map((_, i) => (
+            <span key={i}>{children}</span>
+          ))}
+        </motion.div>
+      </div>
     </>
   );
+};
+ProjectText.propTypes = {
+  children: PropTypes.node.isRequired,
+  baseVelocity: PropTypes.number,
 };
 export default ProjectText;
 
 export function ProjectText2() {
   return (
     <section>
-      <ProjectText baseVelocity={-5}>yuijensen yuijensen</ProjectText>
-      <ProjectText baseVelocity={5}>yuijensen yuijensen</ProjectText>
+      <ProjectText baseVelocity={-5}>yuijensen</ProjectText>
+      <ProjectText baseVelocity={5}>yuijensen</ProjectText>
     </section>
   );
 }

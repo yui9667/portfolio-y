@@ -60,15 +60,15 @@ li {
 }
 .nav-menu {
   position: fixed;
-  right: -115%;
-  top: 0px;
+  left: -100%;
+  top: 0;
   background-color: var(--nav-color);
   width: 100%;
   transition: 0.7s;
   display: flex;
   justify-content: flex-end;
   flex-direction: column;
-  gap: 50px;
+  gap: 20px;
   z-index: 5;
   padding: 10px;
 }
@@ -95,6 +95,7 @@ a {
   cursor: pointer;
   z-index: 6;
   padding: 20px;
+  margin-right: 10px;
 }
 
 .bar {
@@ -115,13 +116,16 @@ a {
   transform: translateY(-8px) rotate(-45deg);
 }
 
+@media (min-width: 1023px) {
+}
+
 @media (min-width: 768px) {
   .hamburger {
     display: none;
   }
   .nav-menu {
     position: static;
-    right: 0%;
+    right: 0;
     flex-direction: row;
     background-color: transparent;
   }

@@ -2,7 +2,7 @@ import { useEffect, useState, createContext } from 'react';
 import PropTypes from 'prop-types';
 //*Create Dark Mode State in globally in all components
 const DarkModeContext = createContext();
-console.log(DarkModeContext);
+
 const DarkModeProvider = ({ children }) => {
   //* Use lazy initialization to get the local storage
   const [darkMode, setDarkMode] = useState(() => {

@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSun, faMoon } from '@fortawesome/free-solid-svg-icons';
 import { DarkModeContext } from '../Toggle/DarkModeContext';
+
 import Logo from '../../assets/logo-jese.png';
 import './Nav.css';
 const Nav = () => {
@@ -41,27 +42,36 @@ const Nav = () => {
   return (
     <div>
       <nav className={`nav-bar ${isScrolled ? 'scrolled' : ''}`}>
-        <Link to='/'>
-          <img src={Logo} alt='logo' className='pl-10 z-10 w-20' />
+        <Link to='/portfolio-y'>
+          <img src={Logo} alt='logo' className='pl-10 z-10 w-24 max-md:w-20' />
         </Link>
         <ul className={`nav-menu ${isOpen ? 'active' : ''}`}>
           <li className='nav-item'>
-            <Link to='/about-me' className='nav-link'>
+            <Link
+              to='/portfolio-y'
+              className='nav-link'
+              onClick={toggleHamburger}
+            >
+              Home
+            </Link>
+          </li>
+          <li className='nav-item'>
+            <Link to='/about-me' className='nav-link' onClick={toggleHamburger}>
               About Me
             </Link>
           </li>
           <li className='nav-item'>
-            <Link to='/project' className='nav-link'>
+            <Link to='/project' className='nav-link' onClick={toggleHamburger}>
               Projects
             </Link>
           </li>
           <li className='nav-item'>
-            <Link to='/about-me' className='nav-link'>
+            <Link to='/about-me' className='nav-link' onClick={toggleHamburger}>
               Skills
             </Link>
           </li>
           <li className='nav-item'>
-            <Link to='/contact' className='nav-link'>
+            <Link to='/contact' className='nav-link' onClick={toggleHamburger}>
               Contact
             </Link>
           </li>

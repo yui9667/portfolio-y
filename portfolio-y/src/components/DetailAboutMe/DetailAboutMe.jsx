@@ -1,6 +1,6 @@
 import Footer from '../Footer/Footer';
 import { motion } from 'framer-motion';
-import { DetailAboutMeProfile } from '../../assets/detailAboutMe.png';
+import DetailAboutMeProfile from '../../assets/detailAboutMe.png';
 import './DetailAboutMe.css';
 import {
   SiHtml5,

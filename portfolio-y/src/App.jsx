@@ -6,13 +6,14 @@ import Contact from './components/Contact/Contact';
 import DetailProject from './components/DetailProject/DetailProject';
 import { DarkModeProvider } from './components/Toggle/DarkModeContext';
 import Nav from './components/Nav/Nav';
+
 function App() {
   return (
     <DarkModeProvider>
       <Router>
         <Nav />
         <Routes>
-          <Route path='/' element={<Dashboard />} />
+          <Route path='/portfolio-y' element={<Dashboard />} />
           <Route path='/about-me' element={<DetailAboutMe />} />
           <Route path='/contact' element={<Contact />} />
           <Route path='/project' element={<DetailProject />} />
