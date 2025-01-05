@@ -3,6 +3,7 @@ import QuizImage from '../../../src/assets/quiz.jpg';
 import { motion } from 'framer-motion';
 import { Button } from '@material-tailwind/react';
 import './DetailProject.css';
+import Footer from '../Footer/Footer';
 const DetailProject = () => {
   const projects = [
     {
@@ -26,7 +27,7 @@ const DetailProject = () => {
   ];
   return (
     <>
-      <div className='detail-project-container'></div>
+    
       <motion.h2
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
@@ -92,6 +93,7 @@ const DetailProject = () => {
         ))}
         <h3 className='max-lg:mb-20'>Currently creating new project now</h3>
       </div>
+      <Footer />
     </>
   );
 };

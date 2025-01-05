@@ -25,7 +25,10 @@ const Nav = () => {
   };
   //* Hamburger menu
   const toggleHamburger = () => {
-    setIsOpen(!isOpen);
+    setIsOpen((prev) => !prev);
+  };
+  const handleLinkClick = () => {
+    setIsOpen(false);
   };
   //* Scroll
   useEffect(() => {
@@ -50,28 +53,28 @@ const Nav = () => {
             <Link
               to='/portfolio-y'
               className='nav-link'
-              onClick={toggleHamburger}
+              onClick={handleLinkClick}
             >
               Home
             </Link>
           </li>
           <li className='nav-item'>
-            <Link to='/about-me' className='nav-link' onClick={toggleHamburger}>
+            <Link to='/about-me' className='nav-link' onClick={handleLinkClick}>
               About Me
             </Link>
           </li>
           <li className='nav-item'>
-            <Link to='/project' className='nav-link' onClick={toggleHamburger}>
+            <Link to='/project' className='nav-link' onClick={handleLinkClick}>
               Projects
             </Link>
           </li>
           <li className='nav-item'>
-            <Link to='/skills' className='nav-link' onClick={toggleHamburger}>
+            <Link to='/skills' className='nav-link' onClick={handleLinkClick}>
               Skills
             </Link>
           </li>
           <li className='nav-item'>
-            <Link to='/contact' className='nav-link' onClick={toggleHamburger}>
+            <Link to='/contact' className='nav-link' onClick={handleLinkClick}>
               Contact
             </Link>
           </li>

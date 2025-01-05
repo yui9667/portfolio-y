@@ -17,6 +17,7 @@ import {
   SiGithub,
   SiGit,
 } from 'react-icons/si';
+import Footer from '../Footer/Footer';
 const Skills = () => {
   return (
     <>
@@ -162,6 +163,7 @@ const Skills = () => {
           </div>
         </motion.div>
       </section>
+      <Footer />
     </>
   );
 };

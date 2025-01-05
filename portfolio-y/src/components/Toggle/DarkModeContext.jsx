@@ -16,7 +16,6 @@ const DarkModeProvider = ({ children }) => {
     } else {
       document.body.classList.remove('dark-mode');
     }
-    localStorage.setItem('darkMode', JSON.stringify(darkMode));
   }, [darkMode]);
   return (
     <DarkModeContext.Provider value={{ darkMode, setDarkMode }}>

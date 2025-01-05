@@ -3,6 +3,7 @@ import emailjs from '@emailjs/browser';
 import { motion } from 'framer-motion';
 import { Button } from '@material-tailwind/react';
 import './Contact.css';
+import Footer from '../Footer/Footer';
 const Contact = () => {
   const form = useRef();
   const sendEmail = (e) => {
@@ -24,7 +25,7 @@ const Contact = () => {
       );
   };
   return (
-    <div className='mt-20 '>
+    <div className='mt-20 ' id='contact'>
       <motion.h2
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
@@ -51,7 +52,7 @@ const Contact = () => {
           whileInView={{ opacity: 1 }}
           transition={{ duration: 1 }}
           viewport={{ once: true, amount: 0.5 }}
-          className='flex flex-col  p-20 mt-20 rounded w-[32rem] shadow-lg border-4 contact-form'
+          className='flex flex-col  p-20 mt-20 rounded w-[32rem] shadow-lg border-4 mb-20 contact-form'
           style={{ backgroundColor: 'var(--contact-form-color)' }}
         >
           <label>Name</label>
@@ -85,6 +86,7 @@ const Contact = () => {
           </Button>
         </motion.form>
       </section>
+      <Footer />
     </div>
   );
 };

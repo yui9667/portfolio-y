@@ -1,6 +1,5 @@
-import Footer from '../Footer/Footer';
 import { motion } from 'framer-motion';
-import DetailAboutMeProfile from '../../assets/detailAboutMe4.png';
+import DetailAboutMeProfile from '../../assets/detailAboutMe6.png';
 import './DetailAboutMe.css';
 import Skills from '../Skills/Skills';
 const DetailAboutMe = () => {
@@ -59,7 +58,6 @@ const DetailAboutMe = () => {
         </div>
       </motion.section>
       <Skills />
-      <Footer />
     </div>
   );
 };
