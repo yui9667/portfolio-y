@@ -8,9 +8,6 @@
   max-width: 750px;
   background-color: var(--container-color);
 }
-.icon {
-  font-size: 60px;
-}
 
 @media (max-width: 768px) {
   .profile-image {
@@ -18,9 +15,6 @@
   }
   .detail-aboutme-container {
     max-width: 500px;
-  }
-  .icon {
-    font-size: 45px;
   }
 }
 @media (max-width: 568px) {
@@ -30,9 +24,6 @@
   .detail-aboutme-container {
     max-width: 300px;
   }
-  .icon {
-    font-size: 40px;
-  }
 }
 @media (max-width: 481px) {
   .profile-image {
@@ -40,12 +31,5 @@
   }
   .detail-aboutme-container {
     max-width: 250px;
-  }
-
-  .skills {
-    width: 100%;
-    max-width: 250px;
-
-    margin: 0 auto;
   }
 }

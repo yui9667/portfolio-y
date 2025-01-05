@@ -66,7 +66,7 @@ const Nav = () => {
             </Link>
           </li>
           <li className='nav-item'>
-            <Link to='/about-me' className='nav-link' onClick={toggleHamburger}>
+            <Link to='/skills' className='nav-link' onClick={toggleHamburger}>
               Skills
             </Link>
           </li>

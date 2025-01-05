@@ -10,7 +10,7 @@ const Dashboard = () => {
   return (
     <div>
       <SvgFolder />
-      <div className='mb-40'>
+      <div className='mb-40 mt-30'>
         <ProjectText2 />
       </div>
       <Task />

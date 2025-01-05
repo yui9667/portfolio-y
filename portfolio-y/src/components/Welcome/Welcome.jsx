@@ -8,9 +8,22 @@ import './Welcome.css';
 const Welcome = () => {
   const [showIcon, setShowIcon] = useState(false);
   const planeAnimation = useSpring({
-    from: { transform: 'translateX(-1300px)' },
+    from: {
+      transform: `translateX(-${
+        window.innerWidth > 768
+          ? 1300
+          : window.innerWidth > 568
+          ? 700
+          : window.innerWidth > 381
+          ? 500
+          : 400
+      }px )`,
+    },
     to: { transform: 'translateX(0px)' },
-    config: { duration: 5000, easing: (t) => t * t * (3 - 2 * t) },
+    config: {
+      duration: 4000,
+      easing: (t) => t * t * (3 - 2 * t),
+    },
     onRest: () => setShowIcon(true),
   });
   const scrollAnimation = useSpring({
@@ -29,8 +42,8 @@ const Welcome = () => {
             items-center h-[80vh] relative'
           style={planeAnimation}
         >
-          <h1 className='mr-5 text-4xl font-semibold tracking-wider drop-shadow-md max-md:text-3xl welcome-letter'>
-            Welcome to Yui Jensen Page
+          <h1 className='mr-5 text-3xl font-semibold tracking-wider drop-shadow-md max-md:text-2xl welcome-letter'>
+            Discover Yui Jensen's Creative Work
           </h1>
           <FontAwesomeIcon
             icon={faPlane}
@@ -43,7 +56,7 @@ const Welcome = () => {
               items-center absolute top-0 right-0 left-0 bottom-0'
             style={scrollAnimation}
           >
-            <p className='text-xl z-10 max-md:text-lg max-md:mt-20'>
+            <p className='text-xl z-10 max-md:text-lg max-md:mt-20 scroll-down'>
               Scroll Down
             </p>
             <FontAwesomeIcon
