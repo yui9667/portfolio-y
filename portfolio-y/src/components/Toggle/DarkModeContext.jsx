@@ -4,12 +4,7 @@ import PropTypes from 'prop-types';
 const DarkModeContext = createContext();
 
 const DarkModeProvider = ({ children }) => {
-  //* Use lazy initialization to get the local storage
-  const [darkMode, setDarkMode] = useState(() => {
-    //*Local Storage persists the dark mode
-    const saveMode = localStorage.getItem('darkMode');
-    return saveMode ? JSON.parse(saveMode) : false;
-  });
+  const [darkMode, setDarkMode] = useState(false);
   useEffect(() => {
     if (darkMode) {
       document.body.classList.add('dark-mode');

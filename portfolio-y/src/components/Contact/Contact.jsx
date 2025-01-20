@@ -57,22 +57,25 @@ const Contact = () => {
         >
           <label>Name</label>
           <input
-            className='py-2 rounded-sm mb-3 '
+            className='py-2 rounded-sm mb-3 pr-2 tracking-wider'
             type='text'
             name='user_name'
+            style={{ color: '#5b3e70' }}
             required
           />
           <label>Email</label>
           <input
-            className='py-3 rounded-sm mb-3'
+            className='py-3 rounded-sm mb-3 tracking-wider'
             type='email'
             name='user_email'
+            style={{ color: '#5b3e70' }}
             required
           />
           <label>Message</label>
           <textarea
             name='message '
-            className='pb-20 rounded-sm mb-3'
+            className='pb-20 rounded-sm mb-3 tracking-wider'
+            style={{ color: '#5b3e70' }}
             required
           />
 
@@ -80,7 +83,7 @@ const Contact = () => {
             type='submit'
             value='Send'
             className='rounded py-2 shadow-lg max-md:text-sm'
-            style={{ backgroundColor: 'var(--btn-color)' }}
+            style={{ backgroundColor: '#5b3e70' }}
           >
             Send
           </Button>

@@ -13,7 +13,7 @@ import {
   SiFigma,
   SiNodedotjs,
   SiMongodb,
-  SiMysql,
+  SiPostgresql,
   SiGithub,
   SiGit,
 } from 'react-icons/si';
@@ -133,7 +133,7 @@ const Skills = () => {
             Databases
           </h3>
           <div className='flex flex-row gap-20 items-center mb-10 max-sm:flex-col'>
-            {[SiMongodb, SiMysql].map((Icon, index) => (
+            {[SiMongodb, SiPostgresql].map((Icon, index) => (
               <motion.div
                 key={index}
                 initial={{ y: 100, opacity: 1 }}
