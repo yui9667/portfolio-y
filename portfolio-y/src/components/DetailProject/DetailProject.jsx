@@ -1,5 +1,6 @@
 import WeatherImage from '../../assets/weather.jpg';
 import QuizImage from '../../../src/assets/quiz.jpg';
+import HotelImage from '../../../src/assets/hotelwebsite.jpg';
 import { motion } from 'framer-motion';
 import { Button } from '@material-tailwind/react';
 import './DetailProject.css';
@@ -7,13 +8,12 @@ import Footer from '../Footer/Footer';
 const DetailProject = () => {
   const projects = [
     {
-      title: 'Weather Forecasts',
-      description:
-        'Using the OpenWeatherMap API, users can enter a location and see the weather for today and the next 7 days.',
-      img: WeatherImage,
-      language: 'HTML, Sass, JavaScript',
-      github: 'https://github.com/yui9667/weather-app',
-      liveDemo: 'https://yui9667.github.io/weather-app/',
+      title: 'SWEJEN.COM',
+      description: 'Full-Stack Hotel Booking Website with payment system.',
+      img: HotelImage,
+      language: 'React, Node.js, Express, MongoDB, Stripe',
+      github: 'https://github.com/yui9667/hotel-website',
+      liveDemo: 'https://swejencom.netlify.app/',
     },
     {
       title: 'Quiz Time',
@@ -24,10 +24,18 @@ const DetailProject = () => {
       github: 'https://github.com/ezgsnyrt/group-project-react',
       liveDemo: 'https://ezgsnyrt.github.io/group-project-react/',
     },
+    {
+      title: 'Weather Forecasts',
+      description:
+        'Using the OpenWeatherMap API, users can enter a location and see the weather for today and the next 7 days.',
+      img: WeatherImage,
+      language: 'HTML, Sass, JavaScript',
+      github: 'https://github.com/yui9667/weather-app',
+      liveDemo: 'https://yui9667.github.io/weather-app/',
+    },
   ];
   return (
     <>
-    
       <motion.h2
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
@@ -71,7 +79,7 @@ const DetailProject = () => {
                 </p>
                 <div className='flex justify-center items-center tracking-wide drop-shadow-lg mt-5 max-xm:flex-col max-xm:gap-3'>
                   <Button
-                    className='mr-3 text-white text-sm rounded px-5 py-2  max-xm:mr-0 max-xm:px-6'
+                    className='mr-3 text-white text-sm rounded px-1 py-2  max-xm:mr-0 max-xm:px-6'
                     style={{ backgroundColor: 'var(--btn-color)' }}
                   >
                     <a href={project.github} target='_blank'>
@@ -79,11 +87,11 @@ const DetailProject = () => {
                     </a>
                   </Button>
                   <Button
-                    className='ml-1  text-white text-sm rounded px-2 py-2  max-xm:ml-0'
+                    className='ml-1 text-white text-sm rounded px-3 py-2  max-xm:ml-0'
                     style={{ backgroundColor: 'var(--btn-color)' }}
                   >
                     <a href={project.liveDemo} target='_blank'>
-                      Live Demo
+                      Demo
                     </a>
                   </Button>
                 </div>

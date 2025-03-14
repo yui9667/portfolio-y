@@ -22,7 +22,7 @@
     width: 300px;
   }
   .detail-aboutme-container {
-    max-width: 300px;
+    max-width: 350px;
   }
 }
 @media (max-width: 481px) {
@@ -30,6 +30,6 @@
     width: 250px;
   }
   .detail-aboutme-container {
-    max-width: 250px;
+    max-width: 300px;
   }
 }

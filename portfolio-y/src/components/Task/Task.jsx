@@ -1,19 +1,18 @@
 import { Button } from '@material-tailwind/react';
-import WeatherImage from '../../assets/weather.jpg';
 import QuizImage from '../../../src/assets/quiz.jpg';
+import HotelImage from '../../../src/assets/hotelwebsite.jpg';
 import './Task.css';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 const Task = () => {
   const projects = [
     {
-      title: 'Weather Forecasts',
-      description:
-        'Using the OpenWeatherMap API, users can enter a location and see the weather for today and the next 7 days.',
-      img: WeatherImage,
-      language: 'HTML, Sass, JavaScript',
-      github: 'https://github.com/yui9667/weather-app',
-      liveDemo: 'https://yui9667.github.io/weather-app/',
+      title: 'SWEJEN.COM',
+      description: 'Full-Stack Hotel Booking Website with payment system.',
+      img: HotelImage,
+      language: 'React, Node.js, Express, MongoDB, Stripe',
+      github: 'https://github.com/yui9667/hotel-website',
+      liveDemo: 'https://swejencom.netlify.app/',
     },
     {
       title: 'Quiz Time',
@@ -63,18 +62,20 @@ const Task = () => {
               <img
                 src={project.img}
                 alt={project.title}
-                className='rounded  project-image '
+                className='rounded project-image '
               />
 
-              <div className='flex flex-col text-center justify-center items-center p-8  '>
+              <div className='flex flex-col text-center justify-center items-center p-8   '>
                 <h3 className='text-2xl , max-sm:text-lg'>{project.title}</h3>
-                <p className='text-xl , max-sm:text-lg'>{project.language}</p>
-                <p className='text-x , max-sm:text-base'>
+                <p className='mt-3 text-xl , max-sm:text-lg'>
+                  {project.language}
+                </p>
+                <p className='mt-1 text-x , max-sm:text-base'>
                   {project.description}
                 </p>
                 <div className='flex justify-center items-center tracking-wide drop-shadow-lg mt-5 max-md:flex-col max-md:gap-3 '>
                   <Button
-                    className='mr-3 text-white text-sm rounded px-5 py-1 max-md:mr-0 max-md:px-6 '
+                    className='mr-3 text-white text-sm rounded px-4 py-1 max-md:mr-0 max-md:px-6 '
                     style={{ backgroundColor: 'var(--btn-color)' }}
                   >
                     <a href={project.github} target='_blank'>
@@ -82,11 +83,11 @@ const Task = () => {
                     </a>
                   </Button>
                   <Button
-                    className='ml-3 text-white text-sm rounded px-2 py-1 max-md:ml-0'
+                    className='ml-3 text-white text-sm rounded px-6 py-1 max-md:ml-0'
                     style={{ backgroundColor: 'var(--btn-color)' }}
                   >
                     <a href={project.liveDemo} target='_blank'>
-                      Live Demo
+                      Demo
                     </a>
                   </Button>
                 </div>

@@ -40,7 +40,7 @@ const DetailAboutMe = () => {
           <h3>About Myself</h3>
           <p className='tracking-wide '>
             I am Japanese and have a passion for exploring and trying new
-            things. I have lived in Canada, and Denmark and am settling down in
+            things. I have lived in Canada, Denmark and am settling down in
             Sweden. I thrive on stepping out of my comfort zone and constantly
             pursuing new challenges. I love playing the drums and recently
             started learning to dance, which has been an exciting new journey
@@ -52,8 +52,7 @@ const DetailAboutMe = () => {
             create websites and bring ideas to life using code, especially with
             tools like JavaScript. I recently completed a Back-End Development
             course inFolkhögskola and am now working towards becoming a
-            full-stack developer. However, my main focus and passion lie in
-            front-end development, where I aim to specialize and excel.
+            full-stack developer.
           </p>
         </div>
       </motion.section>
