@@ -75,7 +75,7 @@ const Task = () => {
                 </p>
                 <div className='flex justify-center items-center tracking-wide drop-shadow-lg mt-5 max-md:flex-col max-md:gap-3 '>
                   <Button
-                    className='mr-3 text-white text-sm rounded px-4 py-1 max-md:mr-0 max-md:px-6 '
+                    className='mr-3 text-white text-sm rounded px-4 py-1 max-md:mr-0 max-md:px-4 '
                     style={{ backgroundColor: 'var(--btn-color)' }}
                   >
                     <a href={project.github} target='_blank'>

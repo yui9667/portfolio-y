@@ -1,7 +1,9 @@
 .container-project {
   width: 100%;
-  max-width: 300px;
+  max-width: 350px;
+  height: 480px;
   background-color: var(--container-color);
+  margin: 0 1rem;
 }
 @media (max-width: 1023px) {
   .parent-container-project {
@@ -13,6 +15,7 @@
 @media (max-width: 481px) {
   .container-project {
     max-width: 250px;
+    height: auto;
   }
   .detail-project-image {
     width: 100%;
