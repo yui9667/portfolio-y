@@ -48,10 +48,10 @@ const DetailAboutMe = () => {
             enjoy it because it allows me to continuously learn and grow,
             especially in an ever-evolving field like IT. I began studying UX
             design through an online platform called Coursera, which sparked my
-            interest in front-end development. It is incredibly exciting to
+            interest in frontend development. It is incredibly exciting to
             create websites and bring ideas to life using code, especially with
-            tools like JavaScript. I recently completed a Back-End Development
-            course inFolkhögskola and am now working towards becoming a
+            tools like JavaScript. I recently completed a Backend Development
+            course in Folkhögskola and am now working towards becoming a
             full-stack developer.
           </p>
         </div>

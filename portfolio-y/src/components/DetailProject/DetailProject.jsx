@@ -11,7 +11,7 @@ const DetailProject = () => {
       title: 'SWEJEN.COM',
       description: 'Full-Stack Hotel Booking Website with payment system.',
       img: HotelImage,
-      language: 'React, Node.js, Express, MongoDB, Stripe',
+      language: ' React, Node.js, Express, MongoDB, Stripe',
       github: 'https://github.com/yui9667/hotel-website',
       liveDemo: 'https://swejencom.netlify.app/',
     },
@@ -73,13 +73,21 @@ const DetailProject = () => {
 
               <div className='flex flex-col text-center justify-center items-center p-8 '>
                 <h3 className='text-2xl, max-sm:text-lg'>{project.title}</h3>
+                <br />
+                <p
+                  className='text-lg, max-sm:text-lg '
+                  style={{ color: 'var(--technologies-color)' }}
+                >
+                  Technologies Used:
+                </p>
                 <p className='text-lg, max-sm:text-lg'>{project.language}</p>
+                <br />
                 <p className='text-base, max-sm:text-base'>
                   {project.description}
                 </p>
                 <div className='flex justify-center items-center tracking-wide drop-shadow-lg mt-5 max-xm:flex-col max-xm:gap-3'>
                   <Button
-                    className='mr-3 text-white text-sm rounded px-1 py-2  max-xm:mr-0 max-xm:px-6'
+                    className='mr-3 text-white text-sm rounded px-1 py-2  max-xm:mr-0  max-xm:px-3 '
                     style={{ backgroundColor: 'var(--btn-color)' }}
                   >
                     <a href={project.github} target='_blank'>
@@ -87,7 +95,7 @@ const DetailProject = () => {
                     </a>
                   </Button>
                   <Button
-                    className='ml-1 text-white text-sm rounded px-3 py-2  max-xm:ml-0'
+                    className='ml-1 text-white text-sm rounded px-3 py-2  max-xm:ml-0 max-xm:px-5 '
                     style={{ backgroundColor: 'var(--btn-color)' }}
                   >
                     <a href={project.liveDemo} target='_blank'>
