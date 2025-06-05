@@ -41,7 +41,7 @@ const DetailProject = () => {
         whileInView={{ opacity: 1 }}
         transition={{ duration: 1 }}
         viewport={{ once: true, amount: 0.5 }}
-        className='text-6xl mt-20 text-center text-bold tracking-wider relative  max-md:text-5xl'
+        className='text-6xl mt-10 text-center text-bold tracking-wider relative  max-md:text-5xl'
         style={{ fontFamily: ' Bebas Neue' }}
       >
         Project

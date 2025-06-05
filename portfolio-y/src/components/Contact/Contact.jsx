@@ -52,7 +52,7 @@ const Contact = () => {
           whileInView={{ opacity: 1 }}
           transition={{ duration: 1 }}
           viewport={{ once: true, amount: 0.5 }}
-          className='flex flex-col  p-20 mt-20 rounded w-[32rem] shadow-lg border-4 mb-20 contact-form'
+          className='flex flex-col p-5 mt-10 rounded w-[32rem] shadow-lg border-4 mb-20 contact-form'
           style={{ backgroundColor: 'var(--contact-form-color)' }}
         >
           <label>Name</label>
@@ -82,8 +82,8 @@ const Contact = () => {
           <Button
             type='submit'
             value='Send'
-            className='rounded py-2 shadow-lg max-md:text-sm'
-            style={{ backgroundColor: '#5b3e70' }}
+            className='rounded mt-8 py-2 shadow-lg max-md:text-sm'
+            style={{ backgroundColor: 'var(--btn-color)' }}
           >
             Send
           </Button>

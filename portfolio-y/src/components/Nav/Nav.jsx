@@ -1,7 +1,7 @@
 import { useState, useEffect, useContext } from 'react';
 import { Link } from 'react-router-dom';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faSun, faMoon } from '@fortawesome/free-solid-svg-icons';
+import { IoIosSunny } from 'react-icons/io';
+import { FaMoon } from 'react-icons/fa';
 import { DarkModeContext } from '../Toggle/DarkModeContext';
 
 import Logo from '../../assets/logo-jese.png';
@@ -58,6 +58,7 @@ const Nav = () => {
               Home
             </Link>
           </li>
+
           <li className='nav-item'>
             <Link to='/about-me' className='nav-link' onClick={handleLinkClick}>
               About Me
@@ -79,11 +80,12 @@ const Nav = () => {
             </Link>
           </li>
           <div className='pr-10'>
-            <FontAwesomeIcon
-              icon={darkMode ? faSun : faMoon}
+            <div
               onClick={toggleDarkMode}
-              style={{ fontSize: '1.5rem', marginTop: '0.5rem' }}
-            />
+              style={{ fontSize: '1.3rem', marginTop: '0.4rem' }}
+            >
+              {darkMode ? <IoIosSunny /> : <FaMoon />}
+            </div>
           </div>
         </ul>
         <div
